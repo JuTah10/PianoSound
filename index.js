@@ -10,6 +10,12 @@ for(let i = 0; i <7;i++){
         var audio = new Audio(`./sound/piano-note-${char}.wav`);
         audio.play(); 
      })
+     document.querySelectorAll(".grid-item")[i].addEventListener("touched",()=>{
+        var char = document.querySelectorAll(".grid-item")[i].textContent.toLowerCase().trim();
+
+        var audio = new Audio(`./sound/piano-note-${char}.wav`);
+        audio.play(); 
+     })
      document.querySelectorAll(".grid-item")[i].addEventListener("mouseout",()=>{
         document.querySelectorAll(".grid-item")[i].style.backgroundColor = "white"
         })
